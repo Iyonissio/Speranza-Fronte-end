@@ -3,9 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 
 const NavBarMenu = () => {
@@ -19,17 +20,16 @@ const NavBarMenu = () => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 1 }}
-            >
-            </IconButton>
-            <Link to="/addProduct"><Typography variant="h3" component="div" sx={{ flexGrow: 2 }}>Formulario App </Typography></Link>
-            <Typography variant="h3" component="div" sx={{ flexGrow: 2 }}>
-            <Link  color="inherit" to="/"> Home </Link>
-            </Typography>
-            <Button color="inherit" >Login</Button>
+              sx={{ mr: 1 }} >
+            </IconButton>           
           </Toolbar>
         </AppBar>
       </Box>
+      <br />
+      <Stack spacing={2} direction="row">
+      <Link to="/"><Button variant="contained">Inicio</Button></Link>
+      <Link to="/addProduct"><Button variant="contained">Add Formulario</Button></Link>
+    </Stack>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const ShowProducts = () => {
     }, [])
     return (
         <div>
-            <h1>Dados Cadastrados</h1>
+            <h1>Forms Cadastrados</h1>
             {
                 products.map((product, index) => (
                     <div>                   

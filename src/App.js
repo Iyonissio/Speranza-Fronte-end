@@ -1,11 +1,10 @@
 import './App.css';
-import ShowProducts from './components/ShowProducts';
-import AddProducts from './components/AddProduct';
+import ShowCondutores  from './components/ShowCondutores ';
+import AddCondutor from './components/AddCondutor';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBarMenu from './components/NavBarMenu';
-import ProductDetail from './components/ProductDetail';
-import UpdateProduct from './components/UpdateProduct';
-// import your route components too
+import ChapaDetail from './components/ChapaDetail';
+// import Todas as Rotas React js Spe Formularios
 
 function App() {
   return (
@@ -13,10 +12,9 @@ function App() {
       <BrowserRouter> 
           <NavBarMenu />
           <Routes>
-            <Route path="/" element={<ShowProducts />} />
-            <Route path="addProduct" element={<AddProducts />} />
-            <Route path="/:id/" element={<ProductDetail/>} />
-            <Route path="/:id/update" element={<UpdateProduct/>} />
+            <Route path="/" element={<ShowCondutores />} />
+            <Route path="addCondutor" element={<AddCondutor />} />
+            <Route path="/:id/" element={<ChapaDetail/>} />
           </Routes>
       </BrowserRouter>
     </div>

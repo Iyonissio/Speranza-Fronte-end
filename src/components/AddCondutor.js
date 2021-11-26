@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 
-const AddProducts = () => {
+const AddCondutor = () => {
 
     const navigate = useNavigate();
+    //Atributos do condutor
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
@@ -87,4 +88,4 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
+export default  AddCondutor;

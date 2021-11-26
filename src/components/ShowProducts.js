@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import { Link } from 'react-router-dom';
 
 const ShowProducts = () => {
 
@@ -31,26 +31,27 @@ const ShowProducts = () => {
     }, [])
     return (
         <div>
-            <h1>Forms Cadastrados</h1>
+            <h1><strong>Forms Cadastrados</strong></h1>
+            
             {
                 products.map((product, index) => (
                     <Container maxWidth="sm">
                         <Card sx={{ minWidth: 275 }}>
                             <CardContent>
                                 <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
-                                <p>Condutor: {product.name}</p>
+                                <p><strong>Condutor:</strong> {product.name}</p>
                                 </Typography>
                                 <Typography variant="h4" component="div">
-                                <p>Endereco do Condutor: {product.address}</p>
+                                <p><strong>Condutor:</strong> {product.address}</p>
                                 </Typography>
                                 <Typography sx={{ mb: 1, fontSize: 18  }} color="text.secondary">
-                                <p>Email do condutor: {product.email}</p>
+                                <p><strong>Email do condutor:</strong>{product.email}</p>
                                 </Typography>
-                                <Typography sx={{ fontSize: 12 }} variant="body2">
+                                <Typography sx={{ fontSize: 16 }} variant="body2">
                                     <p>Celular: {product.phone}</p>
                                     <br />
                                 </Typography>
-                                <Button variant="contained">Ver</Button>
+                                <Link className="btn btn-primary mr-2" to={`/${product.id}`}>Visualizar detalhes</Link>
                             </CardContent>
                         </Card>
                         <br /> 

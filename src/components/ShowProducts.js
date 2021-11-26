@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 
 const ShowProducts = () => {
 
@@ -21,7 +23,6 @@ const ShowProducts = () => {
           component="span"
           sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
         >
-          •
         </Box>
     );
 
@@ -33,26 +34,30 @@ const ShowProducts = () => {
             <h1>Forms Cadastrados</h1>
             {
                 products.map((product, index) => (
-                    <div>                   
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
-                            <p>{product.name}</p>
-                            </Typography>
-                            <Typography variant="h4" component="div">
-                            <p>{product.address}</p>
-                            </Typography>
-                            <Typography sx={{ mb: 2 }} color="text.secondary">
-                            <p>{product.email}</p>
-                            </Typography>
-                            <Typography variant="body2">
-                                
-                                <p>{product.phone}</p>
-                                <br />
-                            </Typography>
+                    <Container maxWidth="sm">
+                        <Card sx={{ minWidth: 275 }}>
+                            <CardContent>
+                                <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
+                                <p>Condutor: {product.name}</p>
+                                </Typography>
+                                <Typography variant="h4" component="div">
+                                <p>Endereco do Condutor: {product.address}</p>
+                                </Typography>
+                                <Typography sx={{ mb: 1, fontSize: 18  }} color="text.secondary">
+                                <p>Email do condutor: {product.email}</p>
+                                </Typography>
+                                <Typography sx={{ fontSize: 12 }} variant="body2">
+                                    <p>Celular: {product.phone}</p>
+                                    <br />
+                                </Typography>
+                                <Button variant="contained">Ver</Button>
                             </CardContent>
-                    </Card>
-                    </div>
+                        </Card>
+                        <br /> 
+                    </Container> 
+                                  
+                    
+                   
                     )
                 )
             }

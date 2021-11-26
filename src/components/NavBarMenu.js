@@ -7,11 +7,12 @@ import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { Container } from "@mui/material";
 
 
 const NavBarMenu = () => {
   return (
-    <div>
+    <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -25,12 +26,15 @@ const NavBarMenu = () => {
           </Toolbar>
         </AppBar>
       </Box>
-      <br />
-      <Stack spacing={2} direction="row">
-      <Link to="/"><Button variant="contained">Inicio</Button></Link>
-      <Link to="/addProduct"><Button variant="contained">Add Formulario</Button></Link>
-    </Stack>
-    </div>
+      <br/>
+      
+        <Stack spacing={2} direction="row">
+          <Link to="/"><Button variant="contained">Inicio</Button></Link>
+          <Link to="/addProduct"><Button variant="contained">Add Formulario</Button></Link>
+        </Stack>
+      </>
+
+   
   );
 };
 
